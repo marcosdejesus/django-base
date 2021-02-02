@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <p class="h5 my-0 me-md-auto fw-normal">Uptime Notifier</p>
+  {% if user.is_authenticated %}
+    <div class="dropdown">
+    </div>
+  {% else %}
+    <a class="btn btn-primary" href="{% url 'users:login' %}">Sign in</a>
+  {% endif %}
+</header>
+<main class="container">
+  <div class="text-center px-3 py-5">
+    <h1> Uptime Notifier </h1>
+    <p class="lead">
+      Get notified when a website go down
+    </p>
+  </div>
+</main>
+
+{% endblock %}

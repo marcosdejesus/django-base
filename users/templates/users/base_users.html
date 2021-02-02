@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% load static %}
+
+
+{% block stylesheet %}
+<link href="{% static 'css/users.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+<main class="container">
+  <h1 class="text-center logo my-4">
+    Uptime Notifier
+  </h1>
+  {% block content %}
+  {% endblock %}
+</main>
+{% endblock %}

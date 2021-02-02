@@ -1,0 +1,28 @@
+{% load static %}<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap css -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" crossorigin="anonymous">
+
+    <!-- Custom css -->
+    {% block stylesheet %}
+    {% endblock %}
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <title>{% block title %}Uptime Notifier{% endblock %}</title>
+  </head> 
+  <body>
+      {% block body %}
+      {% endblock %}
+
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}" crossorigin="anonymous"></script>
+  </body>
+</html>
